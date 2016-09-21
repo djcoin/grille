@@ -1,0 +1,1234 @@
+/* grille CSS */
+
+/* @import 'https://fonts.googleapis.com/css?family=EB+Garamond'; */
+@import 'https://fonts.googleapis.com/css?family=Lato';
+@import 'generated.css';
+
+.com-rigsomelight-devcards-container {
+    width: 100% !important;
+}
+
+
+body {
+    padding: 10px !important;
+}
+
+ul { padding: 0; margin: 0; list-style-type: none; }
+
+/* for fixed http://stackoverflow.com/questions/6414384/how-do-i-use-css-to-position-a-fixed-variable-height-header-and-a-scrollable-con */
+/*
+.grille .bars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 200px;
+    background-color: white;
+}
+*/
+
+
+.eventt-bar ul,
+.top-bar ul {
+    text-align: center;
+}
+
+.top-bar ul {
+    width: 100%
+}
+
+.top-bar li {
+    /* 10 elements */
+    width: 10%;
+    display: inline-block;
+    margin: 0;
+    cursor: pointer;
+}
+
+
+.eventt-bar,
+.top-bar {
+    color: white;
+    font-weight: bold;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.eventt-bar li {
+    display: inline-block;
+    margin: 15px;
+    cursor: pointer;
+}
+
+/* .eventt-bar li, .top-bar li { margin-bottom: 15px; } */
+/*
+.eventt-bar li.enabled,
+.top-bar li.enabled {
+    border-bottom: 5px black solid;
+    margin-bottom: 10px;
+}
+*/
+
+.eventt-bar li.disabled > div,
+.top-bar li.disabled > div {
+    background-color: #555;
+    opacity: 0.5;
+}
+
+.eventt-bar li div,
+.top-bar li div {
+    padding: 5px 10px;
+    margin-bottom: 2px;
+}
+
+
+
+ul.event-group {
+    margin-top: -1px;
+    float: right;
+}
+
+li.event-group-tab {
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* .event-group-tab:last-child { border-right: 1px solid black; } */
+
+li.event-group-tab > div {
+    padding: 2px 5px;
+}
+
+li.event-group-tab.active {
+    background-color: white;
+}
+
+li.event-group-tab.active > div {
+    border: 1px solid #888;
+    font-weight: bold;
+    /* background-color: green; */
+    border-top-color: transparent;
+    border-radius: 0 0 4px 4px;
+}
+
+
+li.event-group-tab .tab-circle {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+.event .event-bubble {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: white;
+    margin-top: -5px;
+    margin-right: 2px;
+    background: url(/site_media/static/public/img/fan-cards.png) no-repeat center;
+}
+
+
+.event .event-bubble .event-bubble-inner {
+    width:100%;
+    line-height:1em;
+    padding: 4px;
+    text-align: right;
+}
+
+
+
+
+.inner-grille {
+    padding: 10px;
+    /* border: 1px black solid; */
+    border-radius: 3px;
+    /* border: 1px solid rgb(231,234,242); */
+}
+
+
+.left-bar { padding-right: 2px; }
+.right-bar { padding-left: 2px; }
+
+
+.ctrl-bar {
+    text-align: center;
+    font-size: 20px;
+    color: #666;
+    margin-top: 15px;
+}
+
+.ctrl-bar .x4, .ctrl-bar .x1,
+.ctrl-bar .backward, .ctrl-bar .forward {
+    display: inline-block;
+}
+
+.ctrl-bar .x1, .ctrl-bar .x4 {
+    /*
+    width: 70px;
+    height: 70px;
+    */
+
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.ctrl-bar .backward .x1 {
+    background: url(/site_media/static/public/img/x1_backward.png);
+}
+
+.ctrl-bar .forward .x1 {
+    background: url(/site_media/static/public/img/x1_forward.png);
+}
+
+.ctrl-bar .backward .x4 {
+    background: url(/site_media/static/public/img/x4_backward.png);
+}
+.ctrl-bar .forward .x4 {
+    background: url(/site_media/static/public/img/x4_forward.png);
+}
+
+
+/*
+.ctrl-bar .x1, .ctrl-bar .x4 {
+    padding: 2px 12px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.ctrl-bar .x1:hover, .ctrl-bar .x4:hover {
+    background-color: #eee;
+    color: #222;
+}
+
+.ctrl-bar .backward .x4 {
+    border-right: 1px #ddd solid;
+}
+
+.ctrl-bar .x4 {
+    border-top: 1px #aaa solid;
+    border-bottom: 1px #aaa solid;
+}
+
+.ctrl-bar .backward .x1 {
+    border: 1px #aaa solid;
+    border-right: 1px #ddd solid;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.ctrl-bar .forward .x1 {
+    border: 1px #aaa solid;
+    border-left: 1px #ddd solid;
+    border-radius: 0px 10px 10px 0px;
+}
+*/
+
+.ctrl-bar-wrapper {
+
+}
+
+
+.grill {
+    height: 1px;
+}
+
+.time-col {
+    width: 60px;
+    min-width: 60px;
+    /* float: left; */
+
+    padding: 1px 0 0;
+    text-align: right;
+    vertical-align: top;
+    /* border-right: 1px solid #ddd; */
+}
+
+
+.day-header, .time-col {
+    font-size: 16px;
+    color: #555;
+}
+
+
+.time-col-cell {
+    /* border-bottom: 1px solid #ddd; */
+    padding-right: 2px;
+    box-sizing: border-box;
+}
+
+.event-grill {
+  position: relative;
+}
+
+
+.markercell {
+    /* DEFINED IN CLJS */
+    /*
+    height: 120px;
+    */
+}
+
+.markercell-inner {
+    /* height must be half of markercell */
+    /* height: 30px; */
+    /* margin-bottom: 20px; */
+
+    /* DEFINED IN CLJS */
+    /*
+    height: 60px;
+    margin-bottom: 60px;
+    */
+    border-bottom: 1px dotted #ddd;
+    border-top: 1px solid #ccc;
+    font-size: 1px;
+}
+
+.eventwrapper {
+    margin-left: 60px;
+ }
+
+table td.col-day {
+    position: relative;
+    margin-right: 5px;
+    border-left: 1px solid #ddd;
+    vertical-align: top;
+}
+
+.col-day, .day-header {
+    /* width: 20%; */
+    /* min-width: 150px; */
+
+}
+
+.event-wrapper {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    /* because http://stackoverflow.com/questions/8468066/child-inside-parent-with-min-height-100-not-inheriting-height */
+    height: 1px;
+}
+
+.event-wrapper:hover {
+    z-index: 101;
+}
+
+.event {
+    margin-right: 5px;
+    border-style: solid;
+    border-width: 10px 0 0 0;
+    margin-left: -1px;
+    height: 100%;
+}
+
+.event-content {
+    height: 100%;
+    border-width: 0px 1px 1px 1px;
+    border-style: solid;
+    border-color: #888;
+    /* border-color: #DB7972; */
+    /* background-color: #F0D0CE; */
+    background-color: #fafafa;
+    color: #777777;
+    color: black;
+    padding: 5px;
+
+    line-height: 1.3em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+/* modal */
+
+.event-grill {
+    position: relative;
+    /* overflow-x: scroll; */
+}
+
+.event-grill.editing {
+    /* overflow-x: hidden; */
+}
+
+.event-grill-wrapper {
+    /* HERE */
+    overflow-y: scroll;
+
+
+    /* overflow-x: hidden; */
+    position: relative;
+}
+
+.event-grill-wrapper {
+    /* height: 100%; */
+
+    height: 600px;
+}
+
+
+.editing .event-grill-wrapper {
+    opacity: 0.5;
+}
+
+.cmodal {
+    z-index: 1050;
+    /*
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 7%;
+    background-color: rgba(1, 1, 1, 0.4)
+}
+
+.cmodal-dialog,
+.cmodal-simple-dialog {
+    position: relative;
+    background-color: white;
+    vertical-align: middle;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    margin: 20px auto;
+}
+
+.cmodal-simple-dialog {
+    width: 50%;
+    height: 50%;
+}
+
+
+.cmodal-arrow-left,
+.cmodal-arrow-right {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    margin-top: -22.5px;
+    width: 31px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.cmodal-arrow-left {
+    left: -80px;
+    background: url("/site_media/static/public/img/arrow_prev.png");
+}
+
+.cmodal-arrow-right {
+    right: -80px;
+    background: url("/site_media/static/public/img/arrow_next.png");
+}
+
+
+.cmodal-dialog {
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,.2);
+    width: 80%;
+    height: 80%;
+}
+
+.cmodal-header {
+    min-height: 16.43px;
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.cmodal-body {
+    position: relative;
+    padding: 15px;
+}
+
+.cmodal-footer {
+    padding: 15px;
+    border-top: 1px solid #e5e5e5;
+}
+
+
+.cmodal-dispose {
+    float: right;
+    cursor: pointer;
+}
+
+
+.event-table {
+    width: 100%;
+    margin-top: -2px;
+    /* border: 1px solid #ddd; */
+
+    /* If a slot is > height, hide it */
+    overflow: hidden;
+}
+
+.event-grill {
+    /* border: 1px solid #ddd; */
+}
+
+.event-grill-viewport {
+     /* border: 1px solid #ddd; */
+     border: solid #aaa;
+     border-width: 1px 0 1px 0px;
+     height: 100%;
+}
+
+
+
+.day-table {
+    width: 100%;
+    /* border: 1px solid #ddd; */
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.event-table, .day-table {
+    table-layout: fixed;
+    border-spacing: 0;
+}
+
+.event-table td {
+    padding: 0;
+}
+
+.rel-grill-wrapper {
+    position: relative;
+}
+
+.abs-grill-wrapper {
+    position: absolute;
+    width: 100%;
+}
+
+/*
+.day-table {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.event-grill-viewport {
+    margin-top: 60px;
+}
+*/
+
+
+.event-content  {
+    text-align: center;
+    padding-top: -5px;
+}
+
+
+/*
+.event-content .sep {
+    margin: -2px 0;
+}
+*/
+
+.event-content .event-type {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.event-content .title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
+.event-detail {
+}
+
+.event-detail .body {
+}
+
+.event-detail .title {
+    text-align: center;
+}
+
+.event-detail .main,
+.event-detail .poster,
+.event-detail .info {
+}
+
+.event-detail .info {
+    /* max-width: 20%; */
+    margin-left: 10px;
+    width: 100px;
+}
+
+
+/*
+.event-detail .poster {
+    width: 80%;
+}
+*/
+
+
+.event-detail .title {
+    font-weight: bold;
+}
+
+.event-detail .hr {
+    clear: both;
+}
+
+.event-detail.has-left-col .location {
+    border-right: 1px black solid;
+}
+
+.event-detail.has-left-col .location,
+.event-detail.has-left-col .poster {
+    width: 26%;
+}
+
+.event-detail.has-left-col .poster {
+    text-align: center;
+}
+.event-detail.has-left-col .poster img {
+    width: 100%;
+}
+
+.event-detail.has-footer.has-left-col .sep {
+    margin-left: 26%;
+    padding-bottom: 10px;
+}
+
+.event-detail.has-footer.has-left-col .sep-in {
+    border-top: 1px black solid;
+}
+
+/* .event-detail .main-co { padding: 10px; } */
+
+.event-detail .organizers {
+    padding: 0 10px 0 10px;
+}
+
+.event-detail .main-col,
+.event-detail .organizers,
+.event-detail.has-footer.has-left-col .sep {
+    padding-left: 15px;
+}
+
+.event-detail {
+    position: relative;
+}
+
+/* 
+ * http://jsfiddle.net/Mandarinazul/WMLd4/
+ * http://stackoverflow.com/questions/1260122/expand-a-div-to-take-the-remaining-width
+ *
+ * */
+
+.event-detail .main,
+.event-detail .footer {
+    display: table;
+    width: 100%;
+}
+
+.event-detail .main-col,
+.event-detail .info {
+    vertical-align: top;
+}
+
+.event-detail .poster,
+.event-detail .main-col,
+.event-detail .info,
+.event-detail .organizers,
+.event-detail .location {
+    display: table-cell;
+}
+
+.event-detail .event-type {}
+
+.event-detail .border-line {
+    padding: 2px 10px;
+    height: 18px;
+}
+
+/*
+.event-detail .border-line span {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+*/
+
+
+
+.event-detail .body {
+    padding: 20px 20px 20px 20px;
+}
+
+
+.eventt-bar .event-type {
+    width: 70px;
+    height: 70px;
+}
+
+.event-detail .event-type {
+    width: 80px;
+    height: 80px;
+    text-align: right;
+}
+
+.event-detail .reg-detail {
+    margin-top: 10px;
+}
+
+
+
+.simon {
+}
+
+
+.simon .body {
+    display: table;
+    table-layout: auto;
+    width: 100%;
+}
+
+.simon .main-col-simon,
+.simon .info-pratique
+{
+    display: table-cell;
+    vertical-align: top;
+
+}
+
+
+.simon .info-pratique {
+    width: 30%;
+    white-space: nowrap;
+    padding-right: 20px;
+}
+
+.simon .main-col-simon {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+
+.simon .event-detail.has-left-col .poster,
+.simon .event-detail .poster,
+.simon .event-detail.has-left-col .poster {
+    /* width: 250px; */
+    min-width: 250px;
+}
+
+.simon .info-simon {
+}
+
+
+.simon .title-date-top {
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+.simon .title-date {
+    font-size: 15px;
+    /*
+    background: url(/site_media/static/public/img/popup/calendar-small.png) no-repeat left;
+    padding: 3px 0px;
+    padding-left: 26px;
+    */
+}
+
+.simon .location-simon {
+    /*
+    background: url(/site_media/static/public/img/popup/icon-address-small.png) no-repeat left;
+    padding: 3px 0px;
+    padding-left: 26px;
+    */
+}
+
+
+
+.simon {
+    font-size: 15px;
+    /* font-family: 'EB Garamond', serif; */
+    font-family: 'Lato', sans-serif;
+}
+
+.simon .location-simon {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.simon .title {
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 20px;
+    /* align with left column */
+    margin-top: -7px;
+}
+
+.organizers-simon li,
+.attendees-simon li {
+    padding-left: 1em;
+}
+
+
+span.attendees-title,
+span.organizers-title {
+    font-weight: bold;
+}
+
+.simon .description {
+    /* padding: 30px 30px 10px 30px; */
+    /* border-top: 1px #aaa solid; */
+    text-align: justify;
+
+}
+
+/* https://github.com/chjj/marked */
+.simon .description ul {
+    list-style-type: initial;
+    padding-left: 2em;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.simon .description ul {
+}
+
+
+.simon .spacer {
+    width: 100%;
+    margin-top: 15px;
+    padding-bottom: 15px;
+    display: block;
+    vertical-align: bottom;
+    border-top: 1px #aaa solid;
+}
+
+.simon .has-poster .description {
+    margin-top: 15px;
+}
+
+.simon .no-poster .description {
+    border-top: 1px #aaa solid;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+
+
+.simon .info-simon {
+}
+
+.info-simon tr.reg-price td {
+}
+
+
+
+/*
+.simon dl, .simon dt, .simon dd {
+    padding: 0; margin: 0;
+}
+
+.simon dl {
+    width: 100%;
+    overflow: hidden;
+}
+
+.simon dt {
+    float: left;
+    width: 40%;
+    clear: left;
+}
+
+.simon dd {
+    float: right;
+    width: 60%;
+    clear: right;
+}
+*/
+
+.simon .top {
+    width: 100%;
+    display: table;
+}
+
+.simon table.info-simon tr td {
+    vertical-align: top;
+}
+
+
+.simon table.info-simon {
+    border: collapse;
+    vertical-align: middle
+}
+
+.simon table.info-simon tr td:first-child {
+    padding-right: 20px;
+}
+
+
+/*
+.simon .info-simon,
+.simon .description {
+    overflow: auto;
+}
+*/
+
+/*
+.simon .description {
+    height: 340px;
+}
+*/
+
+
+.simon .main-col-simon {
+    /* height: 550px; */
+}
+
+
+/* SIZE HERE */
+.simon .cmodal-simple-dialog {
+    width: 50% !important;
+    height: 530px;
+}
+
+
+
+.grille-devcards .cmodal {
+    position: inherit !important;
+}
+
+/*
+.simon .cmodal-simple-dialog {
+    padding-bottom: 25%;
+    position: relative;
+}
+
+.simon .cmodal-simple-dialog-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+*/
+
+.simon .cmodal-simple-dialog-inner {
+    overflow: auto;
+    height: 100%;
+}
+
+table.info-simon td > div {
+    display: inline-block;
+}
+
+table.info-simon td > div+div:before {
+    content: ' ';
+    padding: 8px;
+}
+
+
+table.date-location td {
+    vertical-align: top;
+}
+
+table.date-location {
+    margin-bottom: 20px;
+}
+
+table.date-location .plan {
+    padding-left: 20px;
+}
+
+
+tr.title-date td {
+    padding-bottom: 10px;
+}
+
+
+
+/* planning */
+
+.planning {
+    /* background-color: rgb(142,162,206); */
+    background-color: #f2e3c9;
+    padding: 20px 10px;
+}
+
+.planning-grille,
+.planning .planning-event-detail {
+    display: inline-block;
+}
+
+.planning-grille {
+    width: 40%;
+    vertical-align: top;
+}
+
+.planning .planning-event-detail {
+    width: 60%;
+    padding-left: 20px;
+}
+
+
+
+.event-list .planning-group-day {
+}
+
+.event-list .planning-day {
+    padding-left: 20px;
+}
+
+.event-list .planning-event .color-bar {
+    width: 10px;
+}
+
+.event-list .planning-event .time {
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+.event-list .planning-event .address {
+    padding-right: 20px;
+    font-style: italic;
+}
+
+.event-list .planning-day {
+    font-weight: bold;
+}
+
+.event-list .planning-event {
+    cursor: pointer;
+}
+
+/* border-top: 1px #ccc solid; */
+
+/*
+.planning .planning-event:last-child {
+    border-bottom: 1px #ccc solid;
+}
+*/
+
+.event-list .planning-day-events {
+    display: table;
+    width: 100%;
+    background-color: white;
+    border-collapse: collapse;
+}
+
+.event-list .planning-day-events-tbody {
+    display: table-row-group;
+}
+
+.event-list .planning-event {
+    display: table-row;
+    text-align: left;
+    width: 100%;
+    border: #ccc solid;
+    border-width: 1px 0;
+}
+
+
+
+.event-list .planning-event .color-bar,
+.event-list .planning-event .info-wrapper {
+    display: table-cell;
+}
+
+.event-list .planning-event .time,
+.event-list .planning-event .address,
+.event-list .planning-event .name {
+    display: inline-block;
+}
+
+.full-calendar .cmodal,
+.planning .cmodal {
+    position: inherit !important;
+}
+
+.full-calendar .simon .cmodal-simple-dialog,
+.planning .simon .cmodal-simple-dialog {
+    width: 100% !important;
+    box-shadow: none;
+}
+
+
+.full-calendar .simon .cmodal-simple-dialog,
+.planning .simon .cmodal-simple-dialog {
+    height: 600px;
+    margin: 0;
+}
+
+.planning .planning-grille {
+    max-height: 600px;
+    overflow: auto;
+}
+
+
+.planning .more-event {
+    text-align: center;
+}
+
+.planning .more-event-before,
+.planning .more-event-after {
+    display: inline-block;
+    background-color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.planning .more-event-before {
+    margin-bottom: 10px;
+}
+
+.planning .more-event-after {
+    margin-top: 10px;
+}
+
+
+/* CALENDAR */
+
+
+.calendar {
+    width: 800px;
+}
+
+.calendar table {
+    width: 100%;
+}
+
+.calendar tr.header td {
+    font-weight: bold;
+}
+
+.calendar td {
+    padding: 2px 4px;
+    text-align: center;
+}
+
+
+.calendar td.today {
+    background-color: white;
+}
+
+
+.calendar td.out-month {
+    color: #ccc;
+}
+
+.calendar td.has-event {
+    cursor: pointer;
+    color: #FF6347;
+}
+
+.calendar td.out-month.has-event {
+    color: #ccc;
+    text-decoration: underline;
+}
+
+
+.calendar .back-month,
+.calendar .next-month {
+    cursor: pointer;
+}
+
+.calendar .cal-event-list {
+    border-top: 1px solid black;
+    margin-top: 20px;
+    padding-top: 20px;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.calendar .cal-event-list .event-list {
+    padding: 0 10px;
+}
+
+
+
+/* same as planning */
+.full-calendar {
+    padding: 20px 10px;
+    background-color: #f2e3c9;
+}
+
+.full-calendar .calendar,
+.full-calendar .calendar-event-detail {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.full-calendar .calendar {
+    width: 40%;
+}
+
+.full-calendar .calendar-event-detail {
+    width: 60%;
+    display: inline-block;
+}
+
+.calendar-day-detail {
+    width: 100%
+}
+
+
+
+.full-calendar .calendar-day-detail .cmodal-simple-dialog {
+    /* not 100% */
+    /* box-shadow and position ok */
+}
+
+
+/*
+.full-calendar .calendar-day-detail .simon {
+    width: 50% !important;
+    display: inline-block !important;
+    padding: 20px;
+}
+*/
+
+
+.calendar-day-detail .event-detail-wrapper {
+    width: 33.3333%;
+    padding: 10px;
+    display: inline-block !important;
+}
+
+.calendar-day-detail .event-detail {
+    background-color: white;
+}
+
+
+.eventless {
+    position: absolute;
+    width: 100%;
+}
+
+/*
+  background-color: rgba(220, 220, 220, 0.8);
+ */
+
+.eventless-full {
+    background-color: rgba(240, 240, 240, 0.8);
+}
+
+
+/* http://1stwebdesigner.com/pattern-generator-online/ */
+/* hatch pattern css */
+.eventless-before,
+.eventless-after {
+    /* background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAP0lEQVQYV43M2QkAIAwEUdPT9l/B9qREUDxyzfdjpBUi2SVzigBICBfSmQtP5MIXmdBCH/TQBSO0YYYmrCCFAxoEJ25jSO48AAAAAElFTkSuQmCC); */
+    background-color: white;
+    background: url(/site_media/static/public/img/stripe.png);
+    /*
+     http://www.stripegenerator.com/#Zm9yZT1ENkQ2RDY7aD0zMDt3PTI7cD0yNTtiYWNrMT1mZmZmZmY7YmFjazI9ZmYwMDAwO2d0PTA7ZD0wO3NoYWRvdz0wOw==
+     */
+}
+
+
